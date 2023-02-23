@@ -1,0 +1,27 @@
+PODS:
+  - Nuke (10.7.1)
+  - shared (1.0)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - Nuke
+  - shared (from `../shared`)
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - Nuke
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  shared:
+    :path: "../shared"
+
+SPEC CHECKSUMS:
+  Nuke: 279f17a599fd1c83cf51de5e0e1f2db143a287b0
+  shared: 2d3b24a8fe27b7d9e65b8d075a9672fbc6a1aa10
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: eda291034373bd84c06026b8477c579717e3cf90
+
+COCOAPODS: 1.11.3

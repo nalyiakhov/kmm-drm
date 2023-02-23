@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000</color>
+    <color name="white">#FFF</color>
+    <color name="green">#155D18</color>
+    <color name="red">#ED1C24</color>
+
+    <color name="colorPrimary">#007AC2</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+
+    <color name="mineShaft">#373737</color>
+    <color name="lightGray">#F3F3F3</color>
+    <color name="dodgerBlue">#2196f3</color>
+</resources>

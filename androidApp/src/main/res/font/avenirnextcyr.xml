@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/avenirnextcyrlight"
+        app:fontStyle="normal"
+        app:fontWeight="400"
+        app:font="@font/avenirnextcyrlight"/>
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="450"
+        android:font="@font/avenirnextcyrmedium"
+        app:fontStyle="normal"
+        app:fontWeight="450"
+        app:font="@font/avenirnextcyrmedium"/>
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="500"
+        android:font="@font/avenirnextcyrdemi"
+        app:fontStyle="normal"
+        app:fontWeight="500"
+        app:font="@font/avenirnextcyrdemi"/>
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="600"
+        android:font="@font/avenirnextcyrbold"
+        app:fontStyle="normal"
+        app:fontWeight="600"
+        app:font="@font/avenirnextcyrbold"/>
+</font-family>
