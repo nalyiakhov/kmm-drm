@@ -84,7 +84,7 @@ class WebClient {
 
     @Throws(Exception::class)
     suspend fun getItems(): List<Item> {
-        return customGetRequest(Constants.API_BASE + Constants.ITEMS + "tt")
+        return customGetRequest(Constants.API_BASE + Constants.ITEMS)
     }
 
     private fun HttpRequestBuilder.setJsonContentType() = header(HttpHeaders.ContentType, ContentType.Application.Json)
