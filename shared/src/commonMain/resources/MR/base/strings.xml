@@ -2,4 +2,5 @@
 <resources>
     <string name="no_posts">Нет постов</string>
     <string name="no_posts_yet">Тут пока нет постов</string>
+    <string name="loading_error">Ошибка загрузки</string>
 </resources>

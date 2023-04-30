@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import shared
+import Toaster
 
 let isIpad = UIDevice.current.userInterfaceIdiom == .pad
 let webClient = WebClient()
@@ -31,4 +32,17 @@ var bottomBarHeight: CGFloat {
         return 0
     }
     return root.safeAreaInsets.bottom
+}
+
+func showToast(text: String, duration: TimeInterval = Delay.long) {
+    if text.count == 0 {
+        return
+    }
+    
+    if let currentToast = ToastCenter.default.currentToast {
+        currentToast.cancel()
+    }
+    
+    let toaster = Toast(text: text, duration: duration)
+    toaster.show()
 }

@@ -11,4 +11,6 @@
     <color name="mineShaft">#373737</color>
     <color name="lightGray">#F3F3F3</color>
     <color name="dodgerBlue">#2196f3</color>
+
+    <color name="transparent">#00000000</color>
 </resources>

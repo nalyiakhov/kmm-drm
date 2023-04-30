@@ -1,6 +1,5 @@
 package sais.darom.android
 
-import android.opengl.Visibility
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,13 +13,12 @@ import androidx.navigation.Navigation
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
-import kotlinx.serialization.modules.SerializersModule
 import sais.darom.UserData
 import sais.darom.android.data.ItemAdapter
 import sais.darom.android.databinding.FragmentHomeBinding
+import sais.darom.android.views.CustomToast
 import sais.darom.customCoroutineScope
 import sais.darom.models.Item
 import sais.drm.SharedRes
@@ -31,8 +29,8 @@ class HomeFragment: Fragment() {
     private var emptyLayout: View? = null
     private var progressBar: ProgressBar? = null
 
-    private lateinit var items: ArrayList<Item>
     private lateinit var itemAdapter: ItemAdapter
+    private var items: ArrayList<Item> = arrayListOf()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentHomeBinding.inflate(inflater)
@@ -50,21 +48,7 @@ class HomeFragment: Fragment() {
 
         progressBar?.visibility = View.VISIBLE
 
-        customCoroutineScope.launch {
-            try {
-                loadData()
-            } catch (ex: Exception) {
-                withContext(Dispatchers.Main) {
-                    context?.let {
-                        Toast.makeText(it, ex.localizedMessage, Toast.LENGTH_LONG)
-                    }
-                }
-            } finally {
-                withContext(Dispatchers.Main) {
-                    progressBar?.visibility = View.GONE
-                }
-            }
-        }
+        loadData()
     }
 
     override fun onDestroyView() {
@@ -72,11 +56,22 @@ class HomeFragment: Fragment() {
         binding = null
     }
 
-    private suspend fun loadData() {
-        items = ArrayList(UserData.itemsService.loadItems())
-
-        withContext(Dispatchers.Main) {
-            setupViews()
+    private fun loadData() {
+        customCoroutineScope.launch {
+            try {
+                items = ArrayList(UserData.itemsService.loadItems())
+            } catch (ex: Exception) {
+                withContext(Dispatchers.Main) {
+                    context?.let {
+                        CustomToast.show(SharedRes.strings.loading_error.getString(it))
+                    }
+                }
+            } finally {
+                withContext(Dispatchers.Main) {
+                    setupViews()
+                    progressBar?.visibility = View.GONE
+                }
+            }
         }
     }
 

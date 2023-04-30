@@ -11,6 +11,9 @@ import sais.darom.UserData
 import sais.darom.android.databinding.ActivityMainBinding
 import android.content.Intent
 import android.net.Uri
+import com.soywiz.klock.DateTime
+import sais.darom.android.views.CustomToast
+import java.lang.ref.WeakReference
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -39,7 +42,15 @@ class MainActivity : AppCompatActivity() {
         val appLinkAction: String? = appLinkIntent.action
         val appLinkData: Uri? = appLinkIntent.data
 
+        CustomToast.currentCoordinator = WeakReference(binding.snackBarCoordinator)
+
         println(appLinkAction)
         println(appLinkData)
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        CustomToast.currentCoordinator = WeakReference(binding.snackBarCoordinator)
     }
 }

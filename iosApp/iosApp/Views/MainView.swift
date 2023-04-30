@@ -120,8 +120,8 @@ class MainView: UIView {
         backgroundView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
 
         backgroundView.addSubview(placeholderView)
-        
-        placeholderView.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: statusBarHeight).isActive = true
+
+        placeholderView.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor).isActive = true
         placeholderView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 5).isActive = true
         placeholderView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: -5).isActive = true
         

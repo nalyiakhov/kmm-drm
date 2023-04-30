@@ -27,7 +27,7 @@
 
     <include
         layout="@layout/layout_no_data"
-        android:id="@+id/layout_no_data"/>
+        android:id="@+id/layout_no_data" />
 
     <ProgressBar
         style="?android:attr/progressBarStyleLarge"

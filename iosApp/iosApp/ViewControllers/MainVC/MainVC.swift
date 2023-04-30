@@ -70,8 +70,9 @@ class MainVC: CustomViewController {
                 }
             }
         } catch {
-            print(error)
             self.placeholderView.isHidden = false
+            
+            showToast(text: sharedStrings.loading_error.localized())
         }
     }
 }

@@ -5,4 +5,5 @@ target 'iosApp' do
   
   pod 'Nuke'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'Toaster'
 end
