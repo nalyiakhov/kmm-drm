@@ -9,6 +9,8 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import sais.darom.UserData
 import sais.darom.android.databinding.ActivityMainBinding
+import android.content.Intent
+import android.net.Uri
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -19,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val context: Context = this@MainActivity
-		UserData.webClient.context = context
+        UserData.webClient.context = context
 
         binding = ActivityMainBinding.inflate(layoutInflater)
 
@@ -32,5 +34,12 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
         //val navigationView: NavigationView = binding.navView
         //navigationView.setupWithNavController(navController)
+
+        val appLinkIntent: Intent = intent
+        val appLinkAction: String? = appLinkIntent.action
+        val appLinkData: Uri? = appLinkIntent.data
+
+        println(appLinkAction)
+        println(appLinkData)
     }
 }

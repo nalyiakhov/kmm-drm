@@ -36,7 +36,7 @@ class MainView: UIView {
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.textAlignment = .center
-        label.text = "Нет постов"
+        label.text = sharedStrings.no_posts.localized()
         return label
     }()
 
@@ -48,7 +48,7 @@ class MainView: UIView {
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.textAlignment = .center
-        label.text = "Тут пока нет постов"
+        label.text = sharedStrings.no_posts_yet.localized()
         return label
     }()
 
@@ -86,6 +86,7 @@ class MainView: UIView {
 
     fileprivate func setupViews() {
         addSubview(containerView)
+        addSubview(loadingIndicator)
 
         if #available(iOS 11.0, *) {
             containerView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor).isActive = true
@@ -99,6 +100,9 @@ class MainView: UIView {
         } else {
             containerView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -bottomBarHeight).isActive = true
         }
+        
+        loadingIndicator.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        loadingIndicator.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         
         containerView.addSubview(collectionView)
 
@@ -116,14 +120,10 @@ class MainView: UIView {
         backgroundView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
 
         backgroundView.addSubview(placeholderView)
-        backgroundView.addSubview(loadingIndicator)
         
         placeholderView.topAnchor.constraint(equalTo: backgroundView.topAnchor, constant: statusBarHeight).isActive = true
         placeholderView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 5).isActive = true
         placeholderView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: -5).isActive = true
-        
-        loadingIndicator.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor).isActive = true
-        loadingIndicator.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor).isActive = true
         
         placeholderView.addSubview(placeholderTitle)
         placeholderView.addSubview(placeholderDescription)

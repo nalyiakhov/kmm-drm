@@ -1,7 +1,6 @@
 package sais.darom.serialization.types
 
-import sais.darom.utils.Base64.fromBase64
-import sais.darom.utils.Base64.toBase64
+import io.ktor.util.*
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.PrimitiveKind
 import kotlinx.serialization.descriptors.PrimitiveSerialDescriptor
@@ -12,10 +11,10 @@ class ByteArraySerializer : KSerializer<ByteArray> {
     override val descriptor = PrimitiveSerialDescriptor("byte[]", PrimitiveKind.STRING)
 
     override fun deserialize(decoder: Decoder): ByteArray {
-        return decoder.decodeString().fromBase64()
+        return decoder.decodeString().decodeBase64Bytes()
     }
 
     override fun serialize(encoder: Encoder, value: ByteArray) {
-        return encoder.encodeString(value.toBase64())
+        return encoder.encodeString(value.encodeBase64())
     }
 }

@@ -20,7 +20,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/value"
             app:layout_constraintWidth_percent="0.3"
-            android:fontFamily="@font/avenirnextcyrmedium"
+            android:fontFamily="@font/robotomedium"
             android:textSize="16sp"/>
 
         <TextView
@@ -32,7 +32,7 @@
             app:layout_constraintTop_toTopOf="@+id/name"
             app:layout_constraintBottom_toBottomOf="@+id/name"
             app:layout_constraintWidth_percent="0.7"
-            android:fontFamily="@font/avenirnextcyrmedium"
+            android:fontFamily="@font/robotomedium"
             android:textSize="16sp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

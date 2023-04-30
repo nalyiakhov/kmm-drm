@@ -1,5 +1,6 @@
 package sais.darom.android
 
+import android.opengl.Visibility
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -22,10 +23,12 @@ import sais.darom.android.data.ItemAdapter
 import sais.darom.android.databinding.FragmentHomeBinding
 import sais.darom.customCoroutineScope
 import sais.darom.models.Item
+import sais.drm.SharedRes
 
 class HomeFragment: Fragment() {
     private var binding: FragmentHomeBinding? = null
     private var gridView: GridView? = null
+    private var emptyLayout: View? = null
     private var progressBar: ProgressBar? = null
 
     private lateinit var items: ArrayList<Item>
@@ -36,6 +39,7 @@ class HomeFragment: Fragment() {
 
         val bind = binding!!
         gridView = bind.grid
+        emptyLayout = bind.layoutNoData.emptyData
         progressBar = bind.progressBar
 
         return bind.root
@@ -77,6 +81,8 @@ class HomeFragment: Fragment() {
     }
 
     private fun setupViews() {
+        emptyLayout?.visibility = if (items.isNotEmpty()) View.GONE else View.VISIBLE
+
         itemAdapter = ItemAdapter(requireContext(), items)
         gridView?.adapter = itemAdapter
 

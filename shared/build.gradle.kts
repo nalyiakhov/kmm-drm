@@ -1,25 +1,37 @@
-import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
-
 plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
     id("com.android.library")
     id("org.jetbrains.kotlin.plugin.serialization")
+    id("dev.icerock.mobile.multiplatform-resources")
 }
 
 version = "1.0"
 
+val ktorVersion: String by rootProject.extra
+val serializationVersion: String by rootProject.extra
+val mokoResourcesVersion: String by rootProject.extra
+
 kotlin {
-    android()
+    android {
+        compilations.all {
+            kotlinOptions {
+                jvmTarget = "1.8"
+            }
+        }
+    }
 
-    val ktorVersion = "2.0.0"
-    val iosTarget: (String, KotlinNativeTarget.() -> Unit) -> KotlinNativeTarget =
-        if (System.getenv("SDK_NAME")?.startsWith("iphoneos") == true)
-            ::iosArm64
-        else
-            ::iosX64
-
-    iosTarget("ios") {}
+    listOf(
+        iosX64(),
+        iosArm64(),
+        iosSimulatorArm64()
+    ).forEach {
+        it.binaries.framework {
+            baseName = "shared"
+            export("dev.icerock.moko:resources:$mokoResourcesVersion")
+            export("dev.icerock.moko:graphics:0.9.0") // toUIColor here
+        }
+    }
 
     cocoapods {
         summary = "Some description for the Shared Module"
@@ -33,38 +45,62 @@ kotlin {
     }
 
     sourceSets {
-        val commonMain by getting {
-            dependencies {
-                //Network
-                implementation("io.ktor:ktor-client-core:$ktorVersion")
-                implementation("com.soywiz.korlibs.klock:klock:2.4.5")
-                implementation("com.benasher44:uuid:0.3.1")
-                implementation("org.kodein.di:kodein-di:7.10.0")
-                implementation("org.kodein.di:kodein-di-conf:7.10.0")
+        val commonMain by getting
+        val androidMain by getting
+        val iosX64Main by getting
+        val iosArm64Main by getting
+        val iosSimulatorArm64Main by getting
+        val iosMain by creating {
+            dependsOn(commonMain)
+            iosX64Main.dependsOn(this)
+            iosArm64Main.dependsOn(this)
+            iosSimulatorArm64Main.dependsOn(this)
 
-                implementation("io.ktor:ktor-client-json:$ktorVersion")
-                implementation("io.ktor:ktor-client-logging:$ktorVersion")
-                implementation("io.ktor:ktor-client-auth:$ktorVersion")
-                implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
-                implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
-            }
-        }
-        val androidMain by getting {
             dependencies {
-                //Network
-                //implementation("io.ktor:ktor-client-okhttp:$ktorVersion")
-                implementation("io.ktor:ktor-client-okhttp:2.1.1")
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2")
-                implementation("org.kodein.di:kodein-di-framework-android-x:7.10.0")
-            }
-        }
-        val iosMain by getting {
-            dependencies {
-                //Network
                 implementation("io.ktor:ktor-client-ios:$ktorVersion")
             }
         }
+        val iosX64Test by getting
+        val iosArm64Test by getting
+        val iosSimulatorArm64Test by getting
     }
+}
+
+dependencies {
+    commonMainApi("com.soywiz.korlibs.klock:klock:2.4.13")
+    commonMainApi("com.benasher44:uuid:0.3.1")
+    commonMainApi("org.kodein.di:kodein-di:7.10.0")
+    commonMainApi("org.kodein.di:kodein-di-conf:7.10.0")
+
+    //Network
+    commonMainApi("io.ktor:ktor-client-core:$ktorVersion")
+    commonMainApi("io.ktor:ktor-client-json:$ktorVersion")
+    commonMainApi("io.ktor:ktor-client-logging:$ktorVersion")
+    commonMainApi("io.ktor:ktor-client-auth:$ktorVersion")
+    commonMainApi("io.ktor:ktor-client-content-negotiation:$ktorVersion")
+    commonMainApi("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
+
+    commonMainApi("dev.icerock.moko:resources:$mokoResourcesVersion")
+
+
+    commonTestApi(kotlin("test"))
+    commonTestApi("dev.icerock.moko:resources-test:$mokoResourcesVersion")
+
+    api("io.ktor:ktor-client-okhttp:$ktorVersion")
+    api("org.jetbrains.kotlinx:kotlinx-serialization-json:$serializationVersion")
+    api("org.kodein.di:kodein-di-framework-android-x:7.10.0")
+
+
+    api(kotlin("test-junit"))
+    api("junit:junit:4.13.2")
+}
+
+multiplatformResources {
+    multiplatformResourcesPackage = "sais.drm" // required
+    multiplatformResourcesClassName = "SharedRes" // optional, default MR
+    iosBaseLocalizationRegion = "ru" // optional, default "en"
+    multiplatformResourcesSourceSet = "commonMain"  // optional, default "commonMain"
+    disableStaticFrameworkWarning = true
 }
 
 android {
@@ -74,4 +110,5 @@ android {
         minSdk = 26
         targetSdk = 33
     }
+    namespace = "sais.darom"
 }

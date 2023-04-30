@@ -4,29 +4,22 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/avenirnextcyrlight"
+        android:font="@font/robotoregular"
         app:fontStyle="normal"
         app:fontWeight="400"
-        app:font="@font/avenirnextcyrlight"/>
-    <font
-        android:fontStyle="normal"
-        android:fontWeight="450"
-        android:font="@font/avenirnextcyrmedium"
-        app:fontStyle="normal"
-        app:fontWeight="450"
-        app:font="@font/avenirnextcyrmedium"/>
+        app:font="@font/robotoregular"/>
     <font
         android:fontStyle="normal"
         android:fontWeight="500"
-        android:font="@font/avenirnextcyrdemi"
+        android:font="@font/robotomedium"
         app:fontStyle="normal"
         app:fontWeight="500"
-        app:font="@font/avenirnextcyrdemi"/>
+        app:font="@font/robotomedium"/>
     <font
         android:fontStyle="normal"
         android:fontWeight="600"
-        android:font="@font/avenirnextcyrbold"
+        android:font="@font/robotobold"
         app:fontStyle="normal"
         app:fontWeight="600"
-        app:font="@font/avenirnextcyrbold"/>
+        app:font="@font/robotobold"/>
 </font-family>

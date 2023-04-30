@@ -13,8 +13,8 @@
     </style>
 
     <style name="TextAppearance.App.Button" parent="TextAppearance.MaterialComponents.Button">
-        <item name="fontFamily">@font/avenirnextcyrmedium</item>
-        <item name="android:fontFamily">@font/avenirnextcyrmedium</item>
+        <item name="fontFamily">@font/robotomedium</item>
+        <item name="android:fontFamily">@font/robotomedium</item>
     </style>
 
 </resources>

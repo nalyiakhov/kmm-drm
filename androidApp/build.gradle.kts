@@ -7,20 +7,30 @@ plugins {
 android {
     compileSdk = 33
     defaultConfig {
-        applicationId = "sais.darom.android"
+        applicationId = "sais.drm"
         minSdk = 26
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
     }
     buildTypes {
-        getByName("release") {
+        getByName("debug") {
+            isDebuggable = true
             isMinifyEnabled = false
+            isShrinkResources = false
+            matchingFallbacks += mutableListOf("debug")
+        }
+        getByName("release") {
+            isDebuggable = false
+            isMinifyEnabled = false
+            isShrinkResources = false
+            matchingFallbacks += mutableListOf("debug")
         }
     }
     buildFeatures {
         viewBinding = true
     }
+    namespace = "sais.darom.android"
 }
 
 dependencies {

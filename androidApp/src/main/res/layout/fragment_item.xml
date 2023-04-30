@@ -25,7 +25,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/carousel"
-        android:fontFamily="@font/avenirnextcyrbold"
+        android:fontFamily="@font/robotobold"
         android:textSize="18sp"
         android:layout_marginTop="7sp"/>
 
@@ -36,7 +36,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/item_title"
-        android:fontFamily="@font/avenirnextcyrdemi"
+        android:fontFamily="@font/robotomedium"
         android:textSize="16sp"/>
 
     <Button

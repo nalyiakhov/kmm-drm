@@ -13,6 +13,8 @@ let isIpad = UIDevice.current.userInterfaceIdiom == .pad
 let webClient = WebClient()
 let defaultPadding: CGFloat = 5
 
+let sharedStrings = SharedRes.strings()
+
 var statusBarHeight: CGFloat {
     var statusBarHeight: CGFloat = 0
     if #available(iOS 13.0, *) {

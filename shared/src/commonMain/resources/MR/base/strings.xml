@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <string name="no_posts">Нет постов</string>
+    <string name="no_posts_yet">Тут пока нет постов</string>
+</resources>

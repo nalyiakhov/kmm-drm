@@ -25,6 +25,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
+    <include
+        layout="@layout/layout_no_data"
+        android:id="@+id/layout_no_data"/>
+
     <ProgressBar
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="50sp"
