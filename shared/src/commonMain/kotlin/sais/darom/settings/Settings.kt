@@ -8,6 +8,7 @@ interface ISettings {
     var apnsToken: String?
     var isPinSet: Boolean
     var isBiometric: Boolean
+    var favoriteImages: List<String>
 }
 
 class Settings : ISettings {
@@ -19,6 +20,8 @@ class Settings : ISettings {
         private const val apnsTokenKey = "apnsTokenKey"
         private const val isPinSetKey = "pinSetKey"
         private const val isBiometricKey = "biometricKey"
+
+        private const val favoriteImagesKey = "favoriteImagesKey"
     }
 
     private val prefs = SettingsProvider(preferencesKey)
@@ -42,4 +45,8 @@ class Settings : ISettings {
     override var isBiometric: Boolean
         get() = prefs.getBoolean(isBiometricKey, true)
         set(value) = prefs.putBoolean(isBiometricKey, value)
+
+    override var favoriteImages: List<String>
+        get() = prefs.getStrings(favoriteImagesKey) ?: listOf()
+        set(value) = prefs.putStrings(favoriteImagesKey, value)
 }

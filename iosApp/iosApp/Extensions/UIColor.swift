@@ -17,4 +17,5 @@ extension UIColor {
     static let alphaBackground = UIColor(r: 55, g: 55, b: 55, alpha: 0.5)
     static let codGray = UIColor(r: 17, g: 17, b: 17, alpha: 1.0)
     static let concrete = UIColor(r: 243, g: 243, b: 243, alpha: 1.0)
+    static let gold = UIColor(r: 255, g: 215, b: 0, alpha: 1.0)
 }

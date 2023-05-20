@@ -21,6 +21,9 @@ expect class SettingsProvider(preferencesName: String) {
     fun getBoolean(key: String, defaultValue: Boolean): Boolean
     fun getBoolean(key: String): Boolean?
 
+    fun getStrings(key: String): List<String>?
+    fun putStrings(key: String, value: List<String>)
+
     fun remove(key: String)
     fun clear()
     fun hasKey(key: String): Boolean

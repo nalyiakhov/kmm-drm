@@ -34,6 +34,7 @@ extension UIFont {
     static var regular24: UIFont {return UIFont(name: "Roboto-Regular", size:24)!}
 
     static var bold10: UIFont {return UIFont(name: "Roboto-Bold", size:10)!}
+    static var bold12: UIFont {return UIFont(name: "Roboto-Bold", size:12)!}
     static var bold14: UIFont {return UIFont(name: "Roboto-Bold", size:14)!}
     static var bold16: UIFont {return UIFont(name: "Roboto-Bold", size:16)!}
     static var bold18: UIFont {return UIFont(name: "Roboto-Bold", size:18)!}

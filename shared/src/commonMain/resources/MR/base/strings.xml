@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resources>
+    <!--Common-->
+    <string name="market">Магазин</string>
+    <string name="matrix">Матрица</string>
+    <string name="generator">Генератор изображений</string>
+
+    <!--Market-->
     <string name="no_posts">Нет постов</string>
     <string name="no_posts_yet">Тут пока нет постов</string>
     <string name="loading_error">Ошибка загрузки</string>
+
+    <!--Generator-->
+    <string name="main">Главная</string>
+    <string name="favorite">Избранное</string>
+    <string name="generate">Сгенерировать</string>
+    <string name="enter_text">Введите запрос</string>
+    <string name="no_images">Нет избранных изображений</string>
 </resources>

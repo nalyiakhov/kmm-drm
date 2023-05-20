@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
+		3B1D2A0D2A169E76002EFCB6 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D2A0C2A169E76002EFCB6 /* StartVC.swift */; };
+		3B1D2A0F2A169EA3002EFCB6 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D2A0E2A169EA3002EFCB6 /* StartView.swift */; };
+		3B1D2A132A16A56F002EFCB6 /* GeneratorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D2A122A16A56F002EFCB6 /* GeneratorVC.swift */; };
+		3B1D2A152A16A647002EFCB6 /* GeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D2A142A16A647002EFCB6 /* GeneratorView.swift */; };
+		3B1D2A172A1748BD002EFCB6 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D2A162A1748BC002EFCB6 /* UIImageView.swift */; };
+		3B1D2A192A17D8A1002EFCB6 /* CustomToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D2A182A17D8A1002EFCB6 /* CustomToastView.swift */; };
+		3B1D2A1B2A18052C002EFCB6 /* GeneratorVC+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D2A1A2A18052B002EFCB6 /* GeneratorVC+CollectionView.swift */; };
+		3B1D2A1D2A18061C002EFCB6 /* FavoriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D2A1C2A18061C002EFCB6 /* FavoriteCollectionViewCell.swift */; };
+		3B1D2A1F2A181DF8002EFCB6 /* FavoriteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D2A1E2A181DF8002EFCB6 /* FavoriteImage.swift */; };
+		3B1D2A232A181F4A002EFCB6 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D2A222A181F4A002EFCB6 /* DBHelper.swift */; };
 		3B3CE78628CDBE95005B3C8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3CE78528CDBE95005B3C8F /* SceneDelegate.swift */; };
 		3B3CE78828CDBEA1005B3C8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3CE78728CDBEA1005B3C8F /* AppDelegate.swift */; };
 		3B3CE79B28CDC069005B3C8F /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3CE78C28CDC069005B3C8F /* NSMutableAttributedString.swift */; };
@@ -43,6 +53,16 @@
 /* Begin PBXFileReference section */
 		058557BA273AAA24004C7B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3B1D2A0C2A169E76002EFCB6 /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
+		3B1D2A0E2A169EA3002EFCB6 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		3B1D2A122A16A56F002EFCB6 /* GeneratorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorVC.swift; sourceTree = "<group>"; };
+		3B1D2A142A16A647002EFCB6 /* GeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorView.swift; sourceTree = "<group>"; };
+		3B1D2A162A1748BC002EFCB6 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		3B1D2A182A17D8A1002EFCB6 /* CustomToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToastView.swift; sourceTree = "<group>"; };
+		3B1D2A1A2A18052B002EFCB6 /* GeneratorVC+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GeneratorVC+CollectionView.swift"; sourceTree = "<group>"; };
+		3B1D2A1C2A18061C002EFCB6 /* FavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
+		3B1D2A1E2A181DF8002EFCB6 /* FavoriteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteImage.swift; sourceTree = "<group>"; };
+		3B1D2A222A181F4A002EFCB6 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		3B3CE78528CDBE95005B3C8F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3B3CE78728CDBEA1005B3C8F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B3CE78C28CDC069005B3C8F /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
@@ -99,6 +119,38 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		3B1D2A102A16A521002EFCB6 /* GeneratorVC */ = {
+			isa = PBXGroup;
+			children = (
+				3B1D2A122A16A56F002EFCB6 /* GeneratorVC.swift */,
+				3B1D2A1A2A18052B002EFCB6 /* GeneratorVC+CollectionView.swift */,
+			);
+			path = GeneratorVC;
+			sourceTree = "<group>";
+		};
+		3B1D2A112A16A550002EFCB6 /* MatrixVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MatrixVC;
+			sourceTree = "<group>";
+		};
+		3B1D2A202A181E01002EFCB6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B1D2A1E2A181DF8002EFCB6 /* FavoriteImage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3B1D2A212A181F21002EFCB6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3B1D2A222A181F4A002EFCB6 /* DBHelper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		3B3CE78B28CDC04B005B3C8F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +165,7 @@
 				3B3CE78D28CDC069005B3C8F /* UIView.swift */,
 				3B3CE79128CDC069005B3C8F /* UIViewController.swift */,
 				3BB0F75629FD957000EC0AF2 /* LocalizationExtensions.swift */,
+				3B1D2A162A1748BC002EFCB6 /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -124,6 +177,8 @@
 				3B3CE7BA28CDC98F005B3C8F /* Custom */,
 				3B3CE7AF28CDC3BF005B3C8F /* MainView.swift */,
 				3B40CC7629181D0100A66086 /* PostView.swift */,
+				3B1D2A0E2A169EA3002EFCB6 /* StartView.swift */,
+				3B1D2A142A16A647002EFCB6 /* GeneratorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -144,6 +199,7 @@
 				3B3CE7BB28CDC9A2005B3C8F /* LoadingIndicator.swift */,
 				3B40CC6D290EE87800A66086 /* GradientView.swift */,
 				3B40CC7929181D5300A66086 /* DescriptionView.swift */,
+				3B1D2A182A17D8A1002EFCB6 /* CustomToastView.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -151,8 +207,11 @@
 		3B40CC6A290EDC9E00A66086 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3B1D2A112A16A550002EFCB6 /* MatrixVC */,
+				3B1D2A102A16A521002EFCB6 /* GeneratorVC */,
 				3B40CC7B291824A800A66086 /* MainVC */,
 				3B40CC6F29181C3C00A66086 /* PostVC */,
+				3B1D2A0C2A169E76002EFCB6 /* StartVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -171,6 +230,7 @@
 			children = (
 				3B40CC6B290EE38700A66086 /* ItemCollectionViewCell.swift */,
 				3B40CC7429181CCC00A66086 /* ImageCollectionViewCell.swift */,
+				3B1D2A1C2A18061C002EFCB6 /* FavoriteCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -216,8 +276,10 @@
 				3BC4994829DD954400AB47AD /* iosApp.entitlements */,
 				3B3CE7B128CDC5D4005B3C8F /* Fonts */,
 				3B3CE78B28CDC04B005B3C8F /* Extensions */,
+				3B1D2A212A181F21002EFCB6 /* Utils */,
 				3B3CE7AE28CDC3A1005B3C8F /* Views */,
 				3B40CC6A290EDC9E00A66086 /* ViewControllers */,
+				3B1D2A202A181E01002EFCB6 /* Models */,
 				3B3CE78728CDBEA1005B3C8F /* AppDelegate.swift */,
 				3B3CE78528CDBE95005B3C8F /* SceneDelegate.swift */,
 				3B3CE7BD28CDCA84005B3C8F /* shared.swift */,
@@ -374,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B3CE7BC28CDC9A2005B3C8F /* LoadingIndicator.swift in Sources */,
+				3B1D2A1F2A181DF8002EFCB6 /* FavoriteImage.swift in Sources */,
 				3B40CC7329181C6E00A66086 /* PostVC+CollectionView.swift in Sources */,
 				3B3CE7A228CDC069005B3C8F /* UIApplication.swift in Sources */,
 				3B40CC6E290EE87800A66086 /* GradientView.swift in Sources */,
@@ -382,17 +445,26 @@
 				3B3CE79B28CDC069005B3C8F /* NSMutableAttributedString.swift in Sources */,
 				3B3CE7A728CDC069005B3C8F /* UILabel.swift in Sources */,
 				3B3CE7B028CDC3BF005B3C8F /* MainView.swift in Sources */,
+				3B1D2A0D2A169E76002EFCB6 /* StartVC.swift in Sources */,
 				3B40CC7729181D0100A66086 /* PostView.swift in Sources */,
 				3B3CE7A028CDC069005B3C8F /* UIViewController.swift in Sources */,
 				3B3CE79C28CDC069005B3C8F /* UIView.swift in Sources */,
+				3B1D2A152A16A647002EFCB6 /* GeneratorView.swift in Sources */,
 				3B3CE7A928CDC069005B3C8F /* UIStackView.swift in Sources */,
 				3B40CC7A29181D5300A66086 /* DescriptionView.swift in Sources */,
+				3B1D2A232A181F4A002EFCB6 /* DBHelper.swift in Sources */,
+				3B1D2A172A1748BD002EFCB6 /* UIImageView.swift in Sources */,
 				3BB0F75729FD957000EC0AF2 /* LocalizationExtensions.swift in Sources */,
+				3B1D2A192A17D8A1002EFCB6 /* CustomToastView.swift in Sources */,
+				3B1D2A1D2A18061C002EFCB6 /* FavoriteCollectionViewCell.swift in Sources */,
+				3B1D2A132A16A56F002EFCB6 /* GeneratorVC.swift in Sources */,
 				3B40CC6C290EE38700A66086 /* ItemCollectionViewCell.swift in Sources */,
 				3B3CE79E28CDC069005B3C8F /* UIColor.swift in Sources */,
+				3B1D2A0F2A169EA3002EFCB6 /* StartView.swift in Sources */,
 				3B3CE7AD28CDC38A005B3C8F /* MainVC.swift in Sources */,
 				3B40CC7529181CCC00A66086 /* ImageCollectionViewCell.swift in Sources */,
 				3B3CE7A128CDC069005B3C8F /* String.swift in Sources */,
+				3B1D2A1B2A18052C002EFCB6 /* GeneratorVC+CollectionView.swift in Sources */,
 				3B40CC69290EDC5600A66086 /* MainVC+CollectionView.swift in Sources */,
 				3B3CE79F28CDC069005B3C8F /* UIButton.swift in Sources */,
 				3B40CC7129181C5300A66086 /* PostVC.swift in Sources */,

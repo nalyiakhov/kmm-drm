@@ -1,6 +1,7 @@
 package sais.darom.settings
 
 import platform.Foundation.NSUserDefaults
+import sais.darom.utils.*
 
 actual class SettingsProvider actual constructor(preferencesName: String) {
 
@@ -74,6 +75,17 @@ actual class SettingsProvider actual constructor(preferencesName: String) {
         else null
     }
 
+    actual fun getStrings(key: String): List<String>? {
+        if (hasKey(key)) {
+            return userDefault.arrayForKey(key)?.asListOfType<String>()
+        } else {
+            return null
+        }
+    }
+
+    actual fun putStrings(key: String, value: List<String>) {
+        return userDefault.setObject(value, key)
+    }
 
     actual fun hasKey(key: String): Boolean = userDefault.objectForKey(key) != null
 
