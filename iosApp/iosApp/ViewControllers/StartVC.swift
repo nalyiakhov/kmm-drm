@@ -30,13 +30,12 @@ class StartVC: CustomViewController {
     }
     
     @objc fileprivate func toMatrix() {
-        let marketVC = MainVC()
-        present(marketVC, animated: true)
+        let matrixVC = MatrixVC()
+        present(matrixVC, animated: true)
     }
     
     @objc fileprivate func toGenerator() {
         let generatorVC = GeneratorVC()
-        generatorVC.modalPresentationStyle = .fullScreen
         present(generatorVC, animated: true)
     }
     

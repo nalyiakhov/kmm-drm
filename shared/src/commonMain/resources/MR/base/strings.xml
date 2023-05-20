@@ -16,4 +16,7 @@
     <string name="generate">Сгенерировать</string>
     <string name="enter_text">Введите запрос</string>
     <string name="no_images">Нет избранных изображений</string>
+
+    <!--Matrix-->
+    <string name="calculate">Найти</string>
 </resources>

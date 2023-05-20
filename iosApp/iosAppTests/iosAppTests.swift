@@ -25,7 +25,8 @@ final class iosAppTests: XCTestCase {
 
     func testHasMissingImage() {
         for imageName in sharedSettings.favoriteImages {
-            XCTAssertNotNil(loadImageFromDisk(fileName: imageName), "Has missing favorite image - \(imageName)")
+            let favoriteImage = FavoriteImage(fileName: imageName)
+            XCTAssertNotNil(favoriteImage.image, "Has missing favorite image - \(imageName)")
         }
     }
 }

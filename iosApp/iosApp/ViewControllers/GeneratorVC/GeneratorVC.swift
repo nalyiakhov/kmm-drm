@@ -131,6 +131,9 @@ class GeneratorVC: CustomViewController {
                 }
                 
                 if favoriteImages.count > favoriteImagesLimit {
+                    if let firstImageName = favoriteImagesPath.first {
+                        removeImageFromDisk(fileName: firstImageName)
+                    }
                     favoriteImages.removeFirst()
                     favoriteImagesPath.removeFirst()
                 }
@@ -140,6 +143,7 @@ class GeneratorVC: CustomViewController {
                 }
                 
                 favoriteImages.removeAll(where: { $0.fileName == currentFavoriteImage.fileName })
+                removeImageFromDisk(fileName: currentFavoriteImage.fileName)
             }
             
             sharedSettings.favoriteImages = favoriteImagesPath

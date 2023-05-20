@@ -83,3 +83,14 @@ func loadImageFromDisk(fileName: String) -> UIImage? {
 
     return nil
 }
+
+func removeImageFromDisk(fileName: String) {
+    guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
+
+    let fileURL = documentsDirectory.appendingPathComponent(fileName)
+    if FileManager.default.fileExists(atPath: fileURL.path) {
+        do {
+            try FileManager.default.removeItem(atPath: fileURL.path)
+        } catch {}
+    }
+}
