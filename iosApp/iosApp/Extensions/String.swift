@@ -29,4 +29,7 @@ extension String {
         guard let html = try? NSMutableAttributedString(data: data, options: [NSAttributedString.DocumentReadingOptionKey.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil) else { return nil }
         return html
     }
+    func isNotBlank() -> Bool {
+        return !self.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
 }

@@ -6,4 +6,8 @@ target 'iosApp' do
   pod 'Nuke'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'Toaster'
+  
+  #target 'iosAppUITests' do
+  #  pod 'shared', :path => '../shared'
+  #end
 end
