@@ -19,6 +19,10 @@ extension ResourcesStringResource {
     func localized(args: [String]) -> String {
         return MokoResourcesExtensions.shared.asLocalizedString(self, args: args)
     }
+    
+    func localized(replace: String) -> String {
+        return MokoResourcesExtensions.shared.asLocalizedString(self).replacingOccurrences(of: "%s", with: replace)
+    }
 }
 
 extension ResourcesPluralsResource {

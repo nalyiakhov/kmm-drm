@@ -18,5 +18,11 @@
     <string name="no_images">Нет избранных изображений</string>
 
     <!--Matrix-->
-    <string name="calculate">Найти</string>
+    <string name="calculate">Рассчитать</string>
+    <string name="calculated">Рассчитано, результат выведен в консоль</string>
+    <string name="a_title">Введите A</string>
+    <string name="b_title">Введите B</string>
+    <string name="enter_a_b">Введите A и B</string>
+    <string name="too_large_a_b">A * B должно быть не больше %s</string>
+    <string name="matrix_task">На вход подается матрица A x B. Значение каждой ячейки - целое число 0 или 1. Найти наименьшее расстояние от каждой ячейки до ближайшей ячейки со значением 1. Расстояние между соседними ячейками равно 1.</string>
 </resources>
